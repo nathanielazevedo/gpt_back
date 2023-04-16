@@ -27,3 +27,8 @@ def hello_world():
     except:
       print('error')
       return {"message": "error"}
+    
+if __name__ == "__main__":
+    from waitress import serve
+    print('server started')
+    serve(app, host="0.0.0.0", port=8080)
